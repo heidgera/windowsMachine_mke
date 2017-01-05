@@ -1,6 +1,6 @@
 {
-  "name": "PhotoBoard",
-  "version": "1.0.0",
+  "name": "WindowsMachine",
+  "version": "1.0.1",
   "description": "A minimal photo board",
   "main": "main.js",
   "scripts": {

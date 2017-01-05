@@ -1,5 +1,9 @@
 var script = document.currentScript;
 
+var exec = require('child_process').exec;
+
+require('./test.js');
+
 include(['src/libraries/difflib.js'], function() {
   console.log(µ('|>window', script));
   var main = µ('win-dow[name=' + µ('|>window', script) + ']');
@@ -80,12 +84,40 @@ include(['src/libraries/difflib.js'], function() {
       add = add.substring(7);
     }
 
+    console.log(add + ' is the address');
+
     var comp = new difflib.SequenceMatcher(add, 'www.labsecurity.com/drk');
     if (~add.indexOf('www.labsecurity.com/drk')) add = 'data/drk/video.html';
     else if (comp.ratio() > 0.9) {
       add = 'data/drk/close.html';
     } else if (add == 'data/drk/home.html') {
       add = 'data/drk/home.html';
+    } else if (add == 'retrofit://shutdown') {
+      console.log('attempt shutdown');
+      add = 'data/drk/shutdown.html';
+    } else if (~add.indexOf('retrofit://ipConfig')) {
+      var os = require('os');
+
+      var addresses = '';
+
+      var interfaces = os.networkInterfaces();
+      var addresses = [];
+      for (var k in interfaces) {
+        for (var k2 in interfaces[k]) {
+          var address = interfaces[k][k2];
+          if (address.family === 'IPv4' && !address.internal) {
+            //addresses.push(address.address);
+            addresses += address.address + '; ';
+          }
+        }
+      }
+
+      //cur = newPrompt(addresses);
+      addBox.textContent = addresses;
+    } else if (~add.indexOf('retrofit://wifiConfig')) {
+      //console.log()
+      //require('./wifi.js').writeConfig();
+      µ('#wifi').openWindow();
     } else {
       add = 'data/drk/error.html';
     }
