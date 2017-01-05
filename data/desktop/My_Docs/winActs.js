@@ -1,8 +1,8 @@
 include([], function() {
   var script = document.currentScript;
 
-  var main = µ('win-dow[name=' + µ('|>window', script) + ']');
-  var icon = µ('eye-con[name=' + µ('|>window', script) + ']');
+  var main = µ('win-dow[name=' + µ('|>window', script) + ']')[0];
+  var icon = µ('eye-con[name=' + µ('|>window', script) + ']')[0];
 
   //console.log(main);
   var menu = µ('.winMenu', main)[0];

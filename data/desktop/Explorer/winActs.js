@@ -6,9 +6,9 @@ require('./test.js');
 
 include(['src/libraries/difflib.js'], function() {
   console.log(µ('|>window', script));
-  var main = µ('win-dow[name=' + µ('|>window', script) + ']');
+  var main = µ('win-dow[name=' + µ('|>window', script) + ']')[0];
   console.log(main);
-  var menu = µ('.winMenu', main);
+  var menu = µ('.winMenu', main)[0];
 
   var file = document.createElement('menu-item');
   file.addTitle('File');
