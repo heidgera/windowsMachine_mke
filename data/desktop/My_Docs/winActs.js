@@ -5,11 +5,11 @@ include([], function() {
   var icon = µ('eye-con[name=' + µ('|>window', script) + ']');
 
   //console.log(main);
-  var menu = µ('.winMenu', main);
+  var menu = µ('.winMenu', main)[0];
 
-  var fcont = µ('.frameContent', main.content);
+  var fcont = µ('.frameContent', main.content)[0];
   var cont = µ('+div', fcont);
-  var foot = µ('.winFoot', main);
+  var foot = µ('.winFoot', main)[0];
 
   main.style.visibility = 'visible';
 

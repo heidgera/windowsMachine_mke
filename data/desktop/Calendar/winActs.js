@@ -2,13 +2,13 @@ include([], function() {
   var script = document.currentScript;
   var main = µ('win-dow[name=' + µ('|>window', script) + ']');
   var text = µ('#text', main);
-  var menu = µ('.winMenu', main);
+  var menu = µ('.winMenu', main)[0];
 
   main.changeSize(820, 512);
   main.style.minWidth = '650px';
   main.style.minHeight = '375px';
 
-  var cont = µ('.frameContent', main.content);
+  var cont = µ('.frameContent', main.content)[0];
 
   var cal = transplant(µ('cal-endar', cont));
 

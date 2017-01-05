@@ -10,7 +10,7 @@ include([], function() {
 
   main.content.style.backgroundColor = '#ccb';
 
-  var menu = µ('.winMenu', main);
+  var menu = µ('.winMenu', main)[0];
 
   var file = document.createElement('menu-item');
   file.addTitle('File');
@@ -47,16 +47,16 @@ include([], function() {
   slides = [].slice.call(slides);
   slides.forEach(function(cur, ind, arr) {
     var sl = cur;
-    sl.onmousedown = function () {
-      µ('.currentSlide').className = µ('.currentSlide').className.replace(' currentSlide', '');
+    sl.onmousedown = function() {
+      µ('.currentSlide')[0].className = µ('.currentSlide')[0].className.replace(' currentSlide', '');
       sl.className += ' currentSlide';
-      µ('#displayedSlide').src = µ('img',sl).src;
-    }
+      µ('#displayedSlide').src = µ('img', sl).src;
+    };
   });
 
-  setTimeout(function () {
+  setTimeout(function() {
     main.style.visibility = 'visible';
     µ('body').removeChild(splash);
-  },2000);
+  }, 2000);
 
 });

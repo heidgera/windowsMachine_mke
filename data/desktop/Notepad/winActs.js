@@ -3,7 +3,7 @@ include([], function() {
   var main = µ('win-dow[name=' + µ('|>window', script) + ']');
   console.log('poop');
   var text = µ('#text', main);
-  var menu = µ('.winMenu', main);
+  var menu = µ('.winMenu', main)[0];
 
   var file = document.createElement('menu-item');
   file.addTitle('File');

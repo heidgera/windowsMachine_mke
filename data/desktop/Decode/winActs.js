@@ -2,7 +2,7 @@ include([], function() {
   var script = document.currentScript;
   var main = µ('win-dow[name=' + µ('|>window', script) + ']');
   var text = µ('#text', main);
-  var menu = µ('.winMenu', main);
+  var menu = µ('.winMenu', main)[0];
 
   main.changeSize(375, 400);
 
