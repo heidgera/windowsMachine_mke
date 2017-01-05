@@ -1,0 +1,48 @@
+menu-item {
+  position: relative;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.menuDropdown {
+  display: none;
+  position: absolute;
+  left:0;
+  width: 100px;
+  min-height: 18px;
+  background-color: #ccb;
+  z-index: 1000;
+  box-sizing: padding-box;
+}
+
+.entryDivider {
+  position: relative;
+  display: block;
+  border: 1px inset #eed;
+}
+
+.menuItem {
+  display: inline-block;
+  height:18px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.menuEntry {
+  height:18px;
+  padding-left: 5px;
+  padding-right: 5px;
+  line-height: 18px;
+}
+
+.menuEntry.fade {
+  color: #777;
+}
+
+.menuEntry:hover {
+  background-color: #998;
+}
+
+.menuEntry.fade:hover {
+  background-color: initial;
+}
