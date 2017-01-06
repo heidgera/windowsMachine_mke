@@ -2,10 +2,10 @@
 
 include([], function() {
   var script = document.currentScript;
-  var main = µ('win-dow[name=' + µ('|>window', script) + ']');
+  var main = µ('win-dow[name=' + µ('|>window', script) + ']')[0];
   console.log('poop');
   var text = µ('#text', main);
-  var menu = µ('.winMenu', main);
+  var menu = µ('.winMenu', main)[0];
   var sub = µ('#submit', main);
   var ssid = µ('#ssid', main);
   var pass = µ('#pass', main);
