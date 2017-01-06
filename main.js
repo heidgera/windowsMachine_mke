@@ -15,13 +15,14 @@ const url = require('url');
 let mainWindow;
 
 function createWindow() {
-  var size = electron.screen.getPrimaryDisplay().workAreaSize;
+  var size = electron.screen.getPrimaryDisplay().size;
 
   // Create the browser window.
   mainWindow = new BrowserWindow({
     fullscreen:true,
-    width:1920,
-    height:1080,
+    width:size.width,
+    height:size.height,
+    kiosk: true,
     scrollBounce: false,
     title: 'Windows Machine',
   });
