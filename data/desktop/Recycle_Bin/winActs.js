@@ -14,18 +14,18 @@ include([], function() {
 
   var kids = icon.querySelectorAll('eye-con');
   for (var i = 0; i < kids.length; i++) {
-    cont.appendChild(kids[i]);
+    cont.appendChild(kids[i].cloneNode(true));
     kids[i].style.display = 'inline-block';
   }
 
   µ('+div', foot).textContent = kids.length + ' file(s)';
 
   main.onClose = function(contn) {
-    var kids = µ('eye-con', contn)[0];
+    /*var kids = µ('eye-con', contn)[0];
     for (var i = 0; i < kids.length; i++) {
       icon.appendChild(kids[i]);
       kids[i].style.display = 'none';
-    }
+    }*/
   };
 
   var file = document.createElement('menu-item');
