@@ -10,7 +10,7 @@ include([], function() {
 
   var cont = µ('.frameContent', main.content)[0];
 
-  var cal = transplant(µ('cal-endar', cont));
+  var cal = transplant(µ('cal-endar', cont)[0]);
 
   var file = document.createElement('menu-item');
   file.addTitle('File');

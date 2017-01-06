@@ -1,8 +1,8 @@
 include([], function() {
   var script = document.currentScript;
 
-  var main = µ('win-dow[name=' + µ('|>window', script) + ']');
-  var icon = µ('eye-con[name=' + µ('|>window', script) + ']');
+  var main = µ('win-dow[name=' + µ('|>window', script) + ']')[0];
+  var icon = µ('eye-con[name=' + µ('|>window', script) + ']')[0];
 
   //console.log(main);
   var menu = µ('.winMenu', main)[0];
@@ -21,7 +21,7 @@ include([], function() {
   µ('+div', foot).textContent = kids.length + ' file(s)';
 
   main.onClose = function(contn) {
-    var kids = contn.querySelectorAll('eye-con');
+    var kids = µ('eye-con', contn)[0];
     for (var i = 0; i < kids.length; i++) {
       icon.appendChild(kids[i]);
       kids[i].style.display = 'none';
