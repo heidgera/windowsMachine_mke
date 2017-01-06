@@ -20,8 +20,8 @@ function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     fullscreen:true,
-    width:1920;
-    height:1080;
+    width:1920,
+    height:1080,
     scrollBounce: false,
     title: 'Windows Machine',
   });
