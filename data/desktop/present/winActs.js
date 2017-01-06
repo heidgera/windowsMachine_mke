@@ -1,8 +1,8 @@
 include([], function() {
   var script = document.currentScript;
-  var main = µ('win-dow[name=' + µ('|>window', script) + ']');
+  var main = µ('win-dow[name=' + µ('|>window', script) + ']')[0];
 
-  var splash = µ('+img', µ('body'));
+  var splash = µ('+img', µ('body')[0]);
   splash.src = 'img/present/splash.png';
   splash.className = 'splash';
 
@@ -50,13 +50,13 @@ include([], function() {
     sl.onmousedown = function() {
       µ('.currentSlide')[0].className = µ('.currentSlide')[0].className.replace(' currentSlide', '');
       sl.className += ' currentSlide';
-      µ('#displayedSlide').src = µ('img', sl).src;
+      µ('#displayedSlide').src = µ('img', sl)[0].src;
     };
   });
 
   setTimeout(function() {
     main.style.visibility = 'visible';
-    µ('body').removeChild(splash);
+    µ('body')[0].removeChild(splash);
   }, 2000);
 
 });
