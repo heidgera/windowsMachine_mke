@@ -213,7 +213,7 @@ body {
   left: 50%;
   transform: translate(-50%,-50%);
   height: 125px;
-  width: 275px;
+  width: 300px;
   padding:5px;
   box-shadow:1px 1px 0 .5px #ccb inset,2px 2px 0 1px rgba(255,255,255,.9) inset,
     -1px -1px 0 .5px rgba(0,0,0,.25) inset,1px 1px 0 1px black;
