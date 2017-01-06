@@ -12,20 +12,22 @@ include([], function() {
   var fcont = µ('.frameContent', main.content)[0];
   var cont = µ('+div', fcont);
 
-  var kids = icon.querySelectorAll('eye-con');
+  var kids = µ('eye-con', icon);
   for (var i = 0; i < kids.length; i++) {
-    cont.appendChild(kids[i].cloneNode(true));
+    cont.appendChild(kids[i]);
     kids[i].style.display = 'inline-block';
   }
 
   µ('+div', foot).textContent = kids.length + ' file(s)';
 
   main.onClose = function(contn) {
-    /*var kids = µ('eye-con', contn)[0];
+    console.log('closing!');
+    console.log(µ('eye-con', contn));
+    var kids = µ('eye-con', contn);
     for (var i = 0; i < kids.length; i++) {
       icon.appendChild(kids[i]);
       kids[i].style.display = 'none';
-    }*/
+    }
   };
 
   var file = document.createElement('menu-item');
