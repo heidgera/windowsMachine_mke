@@ -93,7 +93,10 @@ include(['src/libraries/difflib.js'], function() {
     } else if (add == 'data/drk/home.html') {
       add = 'data/drk/home.html';
     } else if (add == 'retrofit://shutdown') {
-      console.log('attempt shutdown');
+      exec('sudo shutdown now', function(err, out, sterr) {
+        console.log(out);
+      });
+
       add = 'data/drk/shutdown.html';
     } else if (~add.indexOf('retrofit://ipConfig')) {
       var os = require('os');
