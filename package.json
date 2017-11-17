@@ -14,7 +14,7 @@
   "license": "CC0-1.0",
   "homepage": "https://github.com/heidgera/mission4Hacker#readme",
   "dependencies": {
-    "electron": "^1.4.5",
+    "electron": "1.4.5",
     "rpio": "^0.9.12"
   }
 }
